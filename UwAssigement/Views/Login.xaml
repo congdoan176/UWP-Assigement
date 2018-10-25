@@ -1,0 +1,26 @@
+﻿<ContentDialog
+    x:Class="UwAssigement.Views.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UwAssigement.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Login">
+
+    <StackPanel HorizontalAlignment="Center">
+        <RelativePanel>
+            <TextBox Header="Email:" PlaceholderText="email@gmail.com" x:Name="Email" HorizontalAlignment="Center" Width="250" />
+            <TextBlock x:Name="Email_Message" RelativePanel.Below="Email"/>
+        </RelativePanel>
+        <RelativePanel>
+            <PasswordBox Header="Password:" x:Name="Password" PlaceholderText="Enter Password" HorizontalAlignment="Center" Width="250"/>
+            <TextBlock x:Name="Password_Message" RelativePanel.Below="Password"/>
+        </RelativePanel>
+        <HyperlinkButton Content="Sign Up?" Click="btnMoveRegister"/>
+        <StackPanel Orientation="Horizontal" Margin="10,5,0,10">
+            <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Tapped="Login_Handle" Click="Button_Click"/>
+            <Button Content="Cancel" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"  Click="Button_Reset"/>
+        </StackPanel>
+    </StackPanel>
+</ContentDialog>
